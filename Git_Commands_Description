@@ -1,0 +1,10 @@
+We’ve introduced a few new concepts since we last revisited our concept map.
+git log
+git diff
+git checkout
+git init
+git add
+git status
+staging area
+working directory
+git commit -m "Commit message"
