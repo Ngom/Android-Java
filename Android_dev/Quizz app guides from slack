@@ -1,0 +1,86 @@
+	
+Tarik D 5:54 PM
+@Elhadji Hard coding the strings, colors and dimensions in the layout is not a good
+practice. I also noticed that you didn’t use a ScrollView, so i was wondering if some of the content will be hidden when rotating your device to landscape mode or did you use a different layout for landscape?
+Check on how to extract the hard-coded strings into strings.xml
+http://envyandroid.com/android-studio-extract-strings-resources/
+Read on how to use colors.xml to keep all colors at one place
+https://programthat.wordpress.com/2013/04/30/how-to-set-up-a-colors-xml-file/
+Read on how to set up dimens.xml for keeping all dimesions at one place.
+https://programthat.wordpress.com/2013/04/30/how-to-set-up-a-dimensions-xml-file/
+Envyandroid.com
+How to extract strings into strings.xml resource files in Android Studio
+I have previously posted a guide on how to extract string resources in Eclipse, so I thought I would do it for Android Studio too, as it is not directly obvious how to acheive this. All your applications strings should... (17 kB)
+Mar 1st, 2014 at 10:43 PM
+ProgramThat; programthat
+How to set up a colors XML file
+It is essential to have a colors XML file in every android project you create. To be used the same color multiple times and hardcode it is not good programming practise. It is easy to forget about one when you are a beginner.
+I am going to step you through how to create one and link it up to your android page. To do so I am going to use the main page which we have already created in the previous guides.
+1. Go to values 
+ 
+2. Right click on values > new > Values resource file
+
+3. A new dialog box should then show up enabling you to enter a name for the resource.  It should always be called colors.
+
+4. You will then be taken to you new XML page once you click OK. In there you can begin to declare the colors which you want to have.
+You do not need to set up all of your colors at once these can be added to as you go along.
+To declare a new color:
+
+The same format above should be used for all colors being used.
+5. Once you have declared the color, you can now link it up to the app page.
+To do so go to layout folder > main.xml
+
+6. I am going to change the background in this case. To change the color of text, backgrounds etc. You use the same aspect each time.
+This can be done two ways:
+ Locate the properties palette on the left hand side of the screen. The fifth resource down is background. Click on it.
+Within the background box  select the three dots. This will then show another dialog box which will enable you to choose the color that we have just added.
+Once you have click OK. You will then see that IntelliJ has added:
+
+The second way to do it is:
+Click on Text at the bottom of the screen. You will then be shown the XML code for page.
+You may find this hard to understand at the start if you have not done XML before.
+At the top of the page you will see the RelativeLayout. This is where we want to add the background.
+Take a new line under the last sentence you have and write:
+Android:background =”@color/pink”
+It should now look this this:
+
+ 
+Final Page:
+ 
+ProgramThat; programthat
+How to set up a dimensions XML file
+It is essential to have a dimensions XML file in every android project you create. To be used the same dimensions multiple times and hardcode it is not good programming practise. It is easy to forget about one when you are a beginner.
+I am going to step you through how to create one and link it up to your android page. To do so I am going to use the main page which we have already created in the previous guides.
+1. Go to values
+ 
+ 
+2. Right click on values > new > Values resource file
+ 
+3. A new dialog box should then show up enabling you to enter a name for the resource.  It should always be called dimens.
+4. You will then be taken to you new XML page once you click OK. In there you can begin to declare the dimens which you want to have.
+You do not need to set up all of your dimensions at once these can be added to as you go along.
+To declare a new dimens:
+
+The same format above should be used for all dimens being used.
+5. Once you have declared the dimens, you can now link it up to the app page.
+To do so go to layout folder > main.xml
+6. I am going to change the TextViews size of text. You use the same aspect each time.
+ 
+This can be done two ways:
+Locate the properties palette on the left hand side of the screen.  Look for a resource which says Text Size. Click on it.
+
+Within the text size box select the three dots. This will then show another dialog box which will enable you to choose the size that we have just added.
+Once you have click OK. You will then see that IntelliJ has added:
+
+ 
+The second way to do it is:
+Click on Text at the bottom of the screen. You will then be shown the XML code for page.
+You may find this hard to understand at the start if you have not done XML before.
+At the top of the page you will see the TextView. This is where we want to add the background.
+Take a new line under the last sentence you have and write:
+android:textSize=”@dimen/size”
+It should now look this this:
+
+Completed version:
+ 
+ 
