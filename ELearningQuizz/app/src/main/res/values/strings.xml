@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">E-Learning Quizz</string>
+    <string name="like">like</string>
+    <string name="test">test</string>
+    <string name="instruction">Click test, give your answer and submit:</string>
+    <string name="sentences">Display the used sentence here!</string>
+    <string name="answershere">Display the right answer here!</string>
+    <string name="thefor">for</string>
+    <string name="since">since</string>
+    <string name="that">that</string>
+    <string name="thise">this</string>
+    <string name="used_to">used to</string>
+    <string name="be_used">be Used</string>
+    <string name="still">still</string>
+    <string name="always">always</string>
+    <string name="as">as</string>
+    <string name="so">so</string>
+    <string name="such">such</string>
+</resources>
