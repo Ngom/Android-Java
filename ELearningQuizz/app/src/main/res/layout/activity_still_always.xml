@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="com.example.elhadji.e_learningquizz.MainActivity">
+    tools:context="com.example.elhadji.e_learningquizz.StillAlwaysActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -72,31 +72,37 @@
                 android:layout_height="1dp"
                 android:background="@color/view_color" />
 
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_color" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:orientation="horizontal">
+                android:layout_marginHorizontal="8dp">
 
                 <CheckBox
-                    android:id="@+id/forcheckbox"
+                    android:id="@+id/stillcheckbox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_weight="1"
                     android:paddingLeft="4dp"
-                    android:text="@string/thefor"
+                    android:text="@string/still"
                     android:textAllCaps="true"
                     android:textSize="@dimen/size" />
 
                 <CheckBox
-                    android:id="@+id/sincecheckbox"
+                    android:id="@+id/alwayscheckbox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
                     android:layout_weight="1"
                     android:paddingLeft="4dp"
-                    android:text="@string/since"
+                    android:text="@string/always"
                     android:textAllCaps="true"
                     android:textSize="@dimen/size" />
 
@@ -104,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:onClick="testStartFor"
+                    android:onClick="testStarStill"
                     android:text="@string/test" />
 
 
@@ -153,6 +159,7 @@
     </RelativeLayout>
 
 </ScrollView>
+
 
 
 

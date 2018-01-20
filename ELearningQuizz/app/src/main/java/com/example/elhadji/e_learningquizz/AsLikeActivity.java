@@ -8,42 +8,41 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class AsLikeActivity extends AppCompatActivity {
 
     /**
      * Sentences used below are defined here !
      */
-    String forSince = "I've been trying to convince her";
 
-
+    String asLike = "your mother before me, I start the violin at the age of 4.";
 
     // Declarations of right checkboxes below:
-    CheckBox boxFor;
-    CheckBox boxSince;
 
-
+    CheckBox boxLike;
+    CheckBox boxAs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_as_like);
         // Initialization of checkboxes below:
-        boxFor = (CheckBox) findViewById(R.id.forcheckbox);
-        boxSince = (CheckBox) findViewById(R.id.sincecheckbox);
 
-
+        boxLike = (CheckBox) findViewById(R.id.likecheckbox);
+        boxAs = (CheckBox) findViewById(R.id.ascheckbox);
     }
+
 
     /**
      * Test methods are defined below!
      */
-    public void testStartFor(View view) {
-        makeSentence(forSince + "  since/for 20 minutes.");
+
+    public void testStarAsLike(View view) {
+        makeSentence("As/Like " + asLike);
     }
 
-
-
-
+    //public void testStarSuSuch(View view) {
+    //    makeSentence("You look so/such angry! " + soSuch);
+    //}
 
 
     /**
@@ -51,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitAnswers(View view) {
         // Go in with control flow statement!
-        if (boxFor.isChecked()) {
-            giveAnswer("You got it, right !\n" + forSince + " for 20 minutes.");
+        if (boxLike.isChecked()) {
+            giveAnswer("Aweasome, right answer !\n" + "Like " + asLike);
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }
@@ -65,15 +64,12 @@ public class MainActivity extends AppCompatActivity {
     public void resetBoxes(View view) {
         //Use toggle() attributes to uncheck boxes !
 
-        if (boxFor.isChecked()) {
-            boxFor.toggle();
+        if (boxLike.isChecked()) {
+            boxLike.toggle();
         }
-        if (boxSince.isChecked()) {
-            boxSince.toggle();
+        if (boxAs.isChecked()) {
+            boxAs.toggle();
         }
-
-
-
 
         makeSentence("Click on one test please!");
         giveAnswer("Thank you for trying, let's see the answer!");
@@ -85,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void goToSecondActivity(View v) {
         // Use Intent to start the second activity
-        Intent intencion = new Intent(this, ThisThatActivity.class);
+        Intent intencion = new Intent(this, SoSuchActivity.class);
         startActivity(intencion);
         finish();
     }
@@ -106,5 +102,5 @@ public class MainActivity extends AppCompatActivity {
         TextView phase = (TextView) findViewById(R.id.result_text_view);
         phase.setText(ansmer);
     }
-}
 
+}

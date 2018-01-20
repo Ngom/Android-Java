@@ -8,42 +8,45 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ThisThatActivity extends AppCompatActivity {
 
     /**
      * Sentences used below are defined here !
      */
-    String forSince = "I've been trying to convince her";
 
+    String thisThat = "picture is too blurry to be worth printing.";
 
 
     // Declarations of right checkboxes below:
-    CheckBox boxFor;
-    CheckBox boxSince;
 
-
+    CheckBox boxThat;
+    CheckBox boxThis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_this_that);
         // Initialization of checkboxes below:
-        boxFor = (CheckBox) findViewById(R.id.forcheckbox);
-        boxSince = (CheckBox) findViewById(R.id.sincecheckbox);
 
-
+        boxThat = (CheckBox) findViewById(R.id.thatcheckbox);
+        boxThis = (CheckBox) findViewById(R.id.thischeckbox);
     }
+
 
     /**
      * Test methods are defined below!
      */
-    public void testStartFor(View view) {
-        makeSentence(forSince + "  since/for 20 minutes.");
+
+    public void testStartThis(View view) {
+        makeSentence("This/That " + thisThat);
     }
 
 
 
 
+    //public void testStarSuSuch(View view) {
+    //    makeSentence("You look so/such angry! " + soSuch);
+    //}
 
 
     /**
@@ -51,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitAnswers(View view) {
         // Go in with control flow statement!
-        if (boxFor.isChecked()) {
-            giveAnswer("You got it, right !\n" + forSince + " for 20 minutes.");
+        if (boxThat.isChecked()) {
+            giveAnswer("You got it, right !\n" + "That " + thisThat);
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }
@@ -65,13 +68,12 @@ public class MainActivity extends AppCompatActivity {
     public void resetBoxes(View view) {
         //Use toggle() attributes to uncheck boxes !
 
-        if (boxFor.isChecked()) {
-            boxFor.toggle();
+        if (boxThat.isChecked()) {
+            boxThat.toggle();
         }
-        if (boxSince.isChecked()) {
-            boxSince.toggle();
+        if (boxThis.isChecked()) {
+            boxThis.toggle();
         }
-
 
 
 
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void goToSecondActivity(View v) {
         // Use Intent to start the second activity
-        Intent intencion = new Intent(this, ThisThatActivity.class);
+        Intent intencion = new Intent(this, BeUsedToActivity.class);
         startActivity(intencion);
         finish();
     }
@@ -107,4 +109,3 @@ public class MainActivity extends AppCompatActivity {
         phase.setText(ansmer);
     }
 }
-

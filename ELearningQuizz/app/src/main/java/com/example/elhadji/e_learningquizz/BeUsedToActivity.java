@@ -8,42 +8,42 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class BeUsedToActivity extends AppCompatActivity {
     /**
      * Sentences used below are defined here !
      */
-    String forSince = "I've been trying to convince her";
 
-
+    String useTo = "live in London.";
 
     // Declarations of right checkboxes below:
-    CheckBox boxFor;
-    CheckBox boxSince;
 
-
-
+    CheckBox boxUseTo;
+    CheckBox boxBeUseTo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_be_used_to);
         // Initialization of checkboxes below:
-        boxFor = (CheckBox) findViewById(R.id.forcheckbox);
-        boxSince = (CheckBox) findViewById(R.id.sincecheckbox);
 
-
+        boxUseTo = (CheckBox) findViewById(R.id.usedtocheckbox);
+        boxBeUseTo = (CheckBox) findViewById(R.id.beusedtocheckbox);
     }
+
+
 
     /**
      * Test methods are defined below!
      */
-    public void testStartFor(View view) {
-        makeSentence(forSince + "  since/for 20 minutes.");
+
+    public void testStartUsedTo(View view) {
+        makeSentence("I am used to/used to " + useTo);
     }
 
 
 
-
+    //public void testStarSuSuch(View view) {
+    //    makeSentence("You look so/such angry! " + soSuch);
+    //}
 
 
     /**
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitAnswers(View view) {
         // Go in with control flow statement!
-        if (boxFor.isChecked()) {
-            giveAnswer("You got it, right !\n" + forSince + " for 20 minutes.");
+        if (boxUseTo.isChecked()) {
+            giveAnswer("You got it, right !\n" + "I used to " + useTo);
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }
@@ -65,14 +65,12 @@ public class MainActivity extends AppCompatActivity {
     public void resetBoxes(View view) {
         //Use toggle() attributes to uncheck boxes !
 
-        if (boxFor.isChecked()) {
-            boxFor.toggle();
+        if (boxUseTo.isChecked()) {
+            boxUseTo.toggle();
         }
-        if (boxSince.isChecked()) {
-            boxSince.toggle();
+        if (boxBeUseTo.isChecked()) {
+            boxBeUseTo.toggle();
         }
-
-
 
 
         makeSentence("Click on one test please!");
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void goToSecondActivity(View v) {
         // Use Intent to start the second activity
-        Intent intencion = new Intent(this, ThisThatActivity.class);
+        Intent intencion = new Intent(this, StillAlwaysActivity.class);
         startActivity(intencion);
         finish();
     }
@@ -107,4 +105,3 @@ public class MainActivity extends AppCompatActivity {
         phase.setText(ansmer);
     }
 }
-

@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
-        <activity android:name=".SoSuchActivity"></activity>
+        <activity android:name=".SoSuchActivity" />
+        <activity android:name=".AsLikeActivity" />
+        <activity android:name=".StillAlwaysActivity" />
+        <activity android:name=".BeUsedToActivity" />
+        <activity android:name=".ThisThatActivity"></activity>
     </application>
 
 </manifest>
