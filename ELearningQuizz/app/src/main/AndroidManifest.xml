@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -16,12 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".SoSuchActivity" />
-        <activity android:name=".AsLikeActivity" />
-        <activity android:name=".StillAlwaysActivity" />
-        <activity android:name=".BeUsedToActivity" />
-        <activity android:name=".ThisThatActivity"></activity>
+        <activity android:name=".SecondActivity"
+                  android:label="@string/labelsecond"/>
+        <activity android:name=".SoSuchActivity"
+                  android:label="@string/labelso"/>
+        <activity android:name=".AsLikeActivity"
+            android:label="@string/labelas"/>
+        <activity android:name=".StillAlwaysActivity"
+                  android:label="@string/labelstill"/>
+        <activity android:name=".BeUsedToActivity"
+            android:label="@string/labeluseto"/>
+        <activity android:name=".ThisThatActivity"
+                  android:label="@string/labelname" />
     </application>
 
 </manifest>

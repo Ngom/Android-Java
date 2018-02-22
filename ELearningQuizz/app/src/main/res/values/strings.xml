@@ -16,4 +16,10 @@
     <string name="as">as</string>
     <string name="so">so</string>
     <string name="such">such</string>
+    <string name="labelname">This / that</string>
+    <string name="labelso">So / Such</string>
+    <string name="labelas">As / Like</string>
+    <string name="labelstill">Still / Always</string>
+    <string name="labeluseto">Use To / Be Used To</string>
+    <string name="labelsecond">Suggestions</string>
 </resources>

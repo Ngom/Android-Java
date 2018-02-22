@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,7 @@ public class ThisThatActivity extends AppCompatActivity {
 
     CheckBox boxThat;
     CheckBox boxThis;
+    TextView lessonRemark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class ThisThatActivity extends AppCompatActivity {
 
         boxThat = (CheckBox) findViewById(R.id.thatcheckbox);
         boxThis = (CheckBox) findViewById(R.id.thischeckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
     }
 
 
@@ -39,6 +42,19 @@ public class ThisThatActivity extends AppCompatActivity {
 
     public void testStartThis(View view) {
         makeSentence("This/That " + thisThat);
+    }
+
+    /**
+     * This method gives the lesson conclusion.
+     */
+    public void lessonRule(){
+        String remark = "'Ce/Cette': THIS/THAT";
+        remark = remark + "\n THIS et THAT sont suivis du singulier.";
+        remark = remark + "\n THESE et THOSE leurs pluriels, sont suivis d'un pluriel.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
     }
 
 
@@ -56,6 +72,7 @@ public class ThisThatActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if (boxThat.isChecked()) {
             giveAnswer("You got it, right !\n" + "That " + thisThat);
+            lessonRule();
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }

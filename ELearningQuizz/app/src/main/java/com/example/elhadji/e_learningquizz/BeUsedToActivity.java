@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,6 +20,8 @@ public class BeUsedToActivity extends AppCompatActivity {
 
     CheckBox boxUseTo;
     CheckBox boxBeUseTo;
+    TextView lessonRemark;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class BeUsedToActivity extends AppCompatActivity {
 
         boxUseTo = (CheckBox) findViewById(R.id.usedtocheckbox);
         boxBeUseTo = (CheckBox) findViewById(R.id.beusedtocheckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
     }
 
 
@@ -41,9 +45,22 @@ public class BeUsedToActivity extends AppCompatActivity {
 
 
 
-    //public void testStarSuSuch(View view) {
-    //    makeSentence("You look so/such angry! " + soSuch);
-    //}
+    /**
+     * This method gives the lesson conclusion.
+     */
+
+    public void lessonRule(){
+        String remark = "'Depuis': USED TO/BE USED TO";
+        remark = remark + "\n USED TO + V:";
+        remark = remark + " s'utilise pour un événement totalement révolu.";
+        remark = remark + " Sa forme ne change jamais.";
+        remark = remark + "\n BE USED TO + V -ING:";
+        remark = remark + " s'utilise pour exprimer une habitude.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
+    }
 
 
     /**
@@ -53,6 +70,7 @@ public class BeUsedToActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if (boxUseTo.isChecked()) {
             giveAnswer("You got it, right !\n" + "I used to " + useTo);
+            lessonRule();
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }

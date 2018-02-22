@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     // Declarations of right checkboxes below:
     CheckBox boxFor;
     CheckBox boxSince;
+    TextView lessonRemark;
 
 
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         // Initialization of checkboxes below:
         boxFor = (CheckBox) findViewById(R.id.forcheckbox);
         boxSince = (CheckBox) findViewById(R.id.sincecheckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
 
 
     }
@@ -41,7 +44,19 @@ public class MainActivity extends AppCompatActivity {
         makeSentence(forSince + "  since/for 20 minutes.");
     }
 
+    /**
+     * This method gives the lesson conclusion.
+     */
 
+    public void lessonRule(){
+        String remark = "'Depuis': FOR/SINCE";
+        remark = remark + "\n FOR est suivi d'une durée, ";
+        remark = remark + "\n SINCE est suivi d'une date ou de la description d'un point départ.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
+    }
 
 
 
@@ -53,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if (boxFor.isChecked()) {
             giveAnswer("You got it, right !\n" + forSince + " for 20 minutes.");
+            lessonRule();
         } else {
             Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
         }
@@ -106,5 +122,7 @@ public class MainActivity extends AppCompatActivity {
         TextView phase = (TextView) findViewById(R.id.result_text_view);
         phase.setText(ansmer);
     }
+
+
 }
 
