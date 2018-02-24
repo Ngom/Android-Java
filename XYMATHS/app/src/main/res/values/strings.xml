@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">XY MATHS</string>
-    <string name="intro">Key of Sucess in Maths (high school)!</string>
-    <string name="autor">Autor: Pape Ousmane THIAO </string>
+    <string name="intro">This book is Key Success in Maths.</string>
+    <string name="autor">Author: Pape Ousmane THIAO </string>
     <string name="price">Price: 29 Euros</string>
-    <string name="text">Lycée de Bambey/Harmattan Senegal, \nBP: 57, Diourbel(Senegal), \nTel: +221 77 360 32 35 </string>
+    <string name="text">57, Bambey,\nHarmattan Senegal.</string>
+    <string name="email">Email Id: padiomayee@gmail.com </string>
+    <string name="cellphone">Phone No: +221 77 360 32 35 </string>
 </resources>
