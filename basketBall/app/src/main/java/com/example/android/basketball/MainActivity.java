@@ -6,8 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int score_a = 0;
-    int score_b = 0;
+    // score variables definition
+    int score_a = 0; // for team A
+    int score_b = 0; // for Team B
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

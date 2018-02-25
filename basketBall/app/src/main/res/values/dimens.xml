@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="butt_marg">12dp</dimen>
+    <dimen name="lastbutmarg">32dp</dimen>
+    <dimen name="scoretextsize">56sp</dimen>
+    <dimen name="namesize">18sp</dimen>
+    <dimen name="textmarg">8dp</dimen>
+    <dimen name="laymarg">16dp</dimen>
+    <dimen name="linesize">2dp</dimen>
+</resources>

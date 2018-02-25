@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">basket Ball</string>
+    <string name="app_name">Basket Ball Score Counter</string>
+    <string name="free_throw">Free Throw</string>
+    <string name="twopoints">+2 points</string>
+    <string name="threepoints">+3 points</string>
+    <string name="reset">reset</string>
+    <string name="team_b">Team B</string>
+    <string name="team_a">Team A</string>
 </resources>
