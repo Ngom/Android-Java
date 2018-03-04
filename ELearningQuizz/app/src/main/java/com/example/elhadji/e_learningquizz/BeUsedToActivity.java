@@ -72,9 +72,8 @@ public class BeUsedToActivity extends AppCompatActivity {
             giveAnswer("You got it, right !\n" + "I used to " + useTo);
             lessonRule();
         } else {
-            Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastMessage, Toast.LENGTH_SHORT).show();
         }
-
     }
 
     /**
@@ -91,8 +90,8 @@ public class BeUsedToActivity extends AppCompatActivity {
         }
 
 
-        makeSentence("Click on one test please!");
-        giveAnswer("Thank you for trying, let's see the answer!");
+        makeSentence(getString(R.string.testbutton));
+        giveAnswer(getString(R.string.thanks));
     }
 
 

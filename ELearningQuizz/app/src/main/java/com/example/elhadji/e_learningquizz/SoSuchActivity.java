@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,14 +18,17 @@ public class SoSuchActivity extends AppCompatActivity {
     // Declarations of right checkboxes below:
     CheckBox boxSo;
     CheckBox boxSuch;
+    TextView lessonRemark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_so_such);
+
         // Initialization of checkboxes below:
         boxSo = (CheckBox) findViewById(R.id.socheckbox);
         boxSuch = (CheckBox) findViewById(R.id.suchcheckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
     }
 
     /**
@@ -35,6 +39,21 @@ public class SoSuchActivity extends AppCompatActivity {
         makeSentence("You look so/such angry! " + soSuch);
     }
 
+    /**
+     * This method gives the lesson conclusion.
+     */
+
+    public void lessonRule(){
+        String remark = "SO/SUCH";
+        remark = remark + "\n SO:";
+        remark = remark + " se place devant un adjectif seul.";
+        remark = remark + "\n SUCH:";
+        remark = remark + " s'utilise avec un groupe nominal.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
+    }
 
     /**
      * Submit answers method
@@ -43,8 +62,9 @@ public class SoSuchActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if  (boxSo.isChecked()) {
             giveAnswer("Aweasome, right answer !\n" + "You look so angry! " + soSuch);
+            lessonRule();
         } else {
-            Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastMessage, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -61,8 +81,8 @@ public class SoSuchActivity extends AppCompatActivity {
         if (boxSuch.isChecked()) {
             boxSuch.toggle();
         }
-        makeSentence("Click on one test please!");
-        giveAnswer("Thank you for trying, let's see the answer!");
+        makeSentence(getString(R.string.testbutton));
+        giveAnswer(getString(R.string.thanks));
     }
 
 

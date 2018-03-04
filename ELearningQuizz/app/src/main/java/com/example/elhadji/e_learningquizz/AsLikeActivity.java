@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,6 +21,7 @@ public class AsLikeActivity extends AppCompatActivity {
 
     CheckBox boxLike;
     CheckBox boxAs;
+    TextView lessonRemark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class AsLikeActivity extends AppCompatActivity {
 
         boxLike = (CheckBox) findViewById(R.id.likecheckbox);
         boxAs = (CheckBox) findViewById(R.id.ascheckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
     }
 
 
@@ -40,9 +43,19 @@ public class AsLikeActivity extends AppCompatActivity {
         makeSentence("As/Like " + asLike);
     }
 
-    //public void testStarSuSuch(View view) {
-    //    makeSentence("You look so/such angry! " + soSuch);
-    //}
+    /**
+     * This method gives the lesson conclusion.
+     */
+
+    public void lessonRule(){
+        String remark = "'Comparaison': AS/LIKE";
+        remark = remark + "\n LIKE: comparaison simple avec 'comme'";
+        remark = remark + "\n AS: signifie 'en tant que'.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
+    }
 
 
     /**
@@ -52,8 +65,9 @@ public class AsLikeActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if (boxLike.isChecked()) {
             giveAnswer("Aweasome, right answer !\n" + "Like " + asLike);
+            lessonRule();
         } else {
-            Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastMessage, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -71,8 +85,8 @@ public class AsLikeActivity extends AppCompatActivity {
             boxAs.toggle();
         }
 
-        makeSentence("Click on one test please!");
-        giveAnswer("Thank you for trying, let's see the answer!");
+        makeSentence(getString(R.string.testbutton));
+        giveAnswer(getString(R.string.thanks));
     }
 
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E-Learning Quizz</string>
+    <string name="app_name">e-Learn Quiz</string>
     <string name="like">like</string>
     <string name="test">test</string>
     <string name="instruction">Click test, give your answer and submit:</string>
@@ -22,4 +22,14 @@
     <string name="labelstill">Still / Always</string>
     <string name="labeluseto">Use To / Be Used To</string>
     <string name="labelsecond">Suggestions</string>
+    <string name="toastMessage">Ooooopps, you miss the right answer!</string>
+    <string name="reset">reset</string>
+    <string name="next">next</string>
+    <string name="submit">Submit</string>
+    <string name="yes">Yes</string>
+    <string name="maybe">Maybe</string>
+    <string name="no">No</string>
+    <string name="back">Back</string>
+    <string name="testbutton">Click on one test button please!</string>
+    <string name="thanks">Thank you for trying, let\'s see the answer!</string>
 </resources>

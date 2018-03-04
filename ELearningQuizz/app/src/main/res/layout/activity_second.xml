@@ -55,21 +55,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/but_margin"
-                android:text="Yes" />
+                android:text="@string/yes" />
 
             <RadioButton
                 android:id="@+id/radio2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/but_margin"
-                android:text="Maybe" />
+                android:text="@string/maybe" />
 
             <RadioButton
                 android:id="@+id/radio3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/but_margin"
-                android:text="No" />
+                android:text="@string/no" />
         </LinearLayout>
 
         <Button
@@ -78,7 +78,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/but_margin"
             android:onClick="backToWelcome"
-            android:text="Back" />
+            android:text="@string/back" />
 
     </LinearLayout>
 

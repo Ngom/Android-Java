@@ -1,6 +1,7 @@
 package com.example.elhadji.e_learningquizz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,8 @@ public class StillAlwaysActivity extends AppCompatActivity {
 
     CheckBox boxAlways;
     CheckBox boxStill;
+    TextView lessonRemark;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class StillAlwaysActivity extends AppCompatActivity {
 
         boxAlways = (CheckBox) findViewById(R.id.alwayscheckbox);
         boxStill = (CheckBox) findViewById(R.id.stillcheckbox);
+        lessonRemark = (TextView) findViewById(R.id.lesson_rule);
     }
 
 
@@ -42,11 +46,21 @@ public class StillAlwaysActivity extends AppCompatActivity {
         makeSentence("He's always/still " + stillAlways);
     }
 
+    /**
+     * This method gives the lesson conclusion.
+     */
 
-    //public void testStarSuSuch(View view) {
-    //    makeSentence("You look so/such angry! " + soSuch);
-    //}
-
+    public void lessonRule(){
+        String remark = "'Toujours': Still/Always";
+        remark = remark + "\n Si on peut remplacer par 'encore':";
+        remark = remark + " 'Still'.";
+        remark = remark + "\n Pour 'à chaque fois' ou 'tout temps':";
+        remark = remark + " 'Always'.";
+        lessonRemark.setText(remark);
+        lessonRemark.setAllCaps(false);
+        lessonRemark.setTextColor(Color.BLUE);
+        lessonRemark.setTextSize(14);
+    }
 
     /**
      * Submit answers method
@@ -55,8 +69,9 @@ public class StillAlwaysActivity extends AppCompatActivity {
         // Go in with control flow statement!
         if (boxAlways.isChecked()) {
             giveAnswer("You got it, right !\n" + "He's always " + stillAlways);
+            lessonRule();
         } else {
-            Toast.makeText(this, " Ooooopps, you miss the right answer!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.toastMessage, Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -74,8 +89,8 @@ public class StillAlwaysActivity extends AppCompatActivity {
             boxStill.toggle();
         }
 
-        makeSentence("Click on one test please!");
-        giveAnswer("Thank you for trying, let's see the answer!");
+        makeSentence(getString(R.string.testbutton));
+        giveAnswer(getString(R.string.thanks));
     }
 
 
